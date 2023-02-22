@@ -31,5 +31,5 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "develop"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: "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"
         # destination_repository: "jhinning/sync-repo2" <- You can also do this but not necessary
