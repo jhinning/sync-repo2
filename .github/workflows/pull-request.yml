@@ -29,8 +29,8 @@ jobs:
       - uses: repo-sync/github-sync@v2
         name: Sync repo to branch
         with:
-          source_repo: jhinning/sync-repo2
-          source_branch: develop
+          source_repo: "jhinning/sync-repo2"
+          source_branch: "develop"
           github_token: ${{ secrets.PAT_TOKEN }}
 
   pull-request:
