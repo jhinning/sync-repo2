@@ -21,6 +21,18 @@ on:
 
 #             _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
 jobs:
+  repo-sync:
+    name: Repo Sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: repo-sync/github-sync@v2
+        name: Sync repo to branch
+        with:
+          source_repo: jhinning/sync-repo2
+          source_branch: develop
+          github_token: ${{ secrets.PAT_TOKEN }}
+
   pull-request:
     runs-on: ubuntu-latest
     steps:
@@ -33,15 +45,3 @@ jobs:
           destination_branch: "develop"
           github_token: ${{ secrets.PAT_TOKEN }}
           destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
-# File: .github/workflows/pull-request.yml
-
-# jobs:
-#   pull-request:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - name: pull-request
-#         uses: repo-sync/pull-request@v2
-#         with:
-#           destination_branch: "develop"
-#           github_token: ${{ secrets.PAT_TOKEN }}

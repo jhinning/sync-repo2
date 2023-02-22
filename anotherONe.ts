@@ -5,5 +5,5 @@ interface IanotherONeProps {
 }
 
 export function anotherONe({}: IanotherONeProps) {
-    return ();
+    return ();sdgasgsgda
 }
