@@ -29,7 +29,7 @@ jobs:
         name: Sync repo to branch
         with:
           source_repo: "jhinning/sync-repo2"
-          source_branch: feat/entity
+          source_branch: "develop"
           destination_branch: "repo-sync"
           github_token: ${{ secrets.PAT_TOKEN }}
       - uses: actions/checkout@v2
