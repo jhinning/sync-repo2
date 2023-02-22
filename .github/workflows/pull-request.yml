@@ -20,28 +20,28 @@ on:
 #             :crown: *An automated PR*
 
 #             _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
-# jobs:
-#   pull-request:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           repository: "jhinning/sync-repo1"
-#       - name: pull-request
-#         uses: repo-sync/pull-request@v2
-#         with:
-#           destination_branch: "develop"
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
-# File: .github/workflows/pull-request.yml
-
 jobs:
   pull-request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+        with:
+          repository: "jhinning/sync-repo1"
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "develop"
           github_token: ${{ secrets.PAT_TOKEN }}
+          destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
+# File: .github/workflows/pull-request.yml
+
+# jobs:
+#   pull-request:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: pull-request
+#         uses: repo-sync/pull-request@v2
+#         with:
+#           destination_branch: "develop"
+#           github_token: ${{ secrets.PAT_TOKEN }}
