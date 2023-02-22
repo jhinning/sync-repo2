@@ -26,10 +26,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: "jhinning/sync-repo2"
+          repository: "jhinning/sync-repo1"
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "develop"
-          github_token: "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"
-        # destination_repository: "jhinning/sync-repo2" <- You can also do this but not necessary
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
