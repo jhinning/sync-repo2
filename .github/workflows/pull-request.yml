@@ -21,8 +21,7 @@ on:
 
 #             _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
 jobs:
-  repo-sync:
-    name: Repo Sync
+  pull-request:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,12 +29,9 @@ jobs:
         name: Sync repo to branch
         with:
           source_repo: "jhinning/sync-repo2"
-          source_branch: "develop"
+          source_branch: feat/entity
+          destination_branch: "repo-sync"
           github_token: ${{ secrets.PAT_TOKEN }}
-
-  pull-request:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v2
         with:
           repository: "jhinning/sync-repo1"
