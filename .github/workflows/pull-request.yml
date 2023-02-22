@@ -32,7 +32,7 @@ jobs:
         with:
           destination_branch: "develop"
           github_token: ${{ secrets.PAT_TOKEN }}
-          destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
+          # destination_repository: "jhinning/sync-repo2" #<- You can also do this but not necessary
 # File: .github/workflows/pull-request.yml
 
 # jobs:
