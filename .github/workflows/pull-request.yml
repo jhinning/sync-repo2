@@ -44,4 +44,4 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "develop"
-          github_token: "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"
+          github_token: ${{ secrets.PAT_TOKEN }}
