@@ -4,7 +4,4 @@ interface InewFileProps {
 
 }
 
-export function newFile({}: InewFileProps) {
-    return ();
-}
-agdasgsgdsad
+delete
