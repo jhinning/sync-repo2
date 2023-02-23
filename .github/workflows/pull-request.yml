@@ -1,8 +1,10 @@
 name: Pull request
 on:
-  push:
-    branches:
-      - "feat/*" # Support wildcard matching
+  pull_request:
+
+  # push:
+  #   branches:
+  #     - "feat/*" # Support wildcard matching
 
 # jobs:
 #   pull-request:
