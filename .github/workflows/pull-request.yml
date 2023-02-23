@@ -31,9 +31,9 @@ jobs:
       - name: git-sync
         uses: wei/git-sync@v3
         with:
-          source_repo: "jhinning/sync-repo1"
+          source_repo: "https://jhinning:${{ secrets.PAT_TOKEN }}@github.com/jhinning/sync-repo1.git"
           source_branch: ${{ github.head_ref || github.ref_name }}
-          destination_repo: "jhinning/sync-repo2"
+          destination_repo: "https://jhinning:${{ secrets.PAT_TOKEN }}@github.com/jhinning/sync-repo2.git"
           destination_branch: ${{ github.head_ref || github.ref_name }}
 
       - uses: actions/checkout@v2
